@@ -25,45 +25,77 @@ class DashboardView extends GetView {
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[700],
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0x00000000).withOpacity(0.2),
-            offset: const Offset(0, 2),
-            blurRadius: 7,
-            spreadRadius: 4,
-          ),
-        ],
       ),
       width: double.infinity,
       padding: const EdgeInsets.all(10),
-      child: const Row(
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            Icons.account_circle_rounded,
-            size: 50,
-            color: Colors.white,
+          Row(
+            children: [
+              Icon(
+                Icons.account_circle_rounded,
+                size: 50,
+                color: Colors.white,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Nama User",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    "Developer",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.white,
+                    ),
+                  )
+                ],
+              )
+            ],
           ),
           SizedBox(
-            width: 10,
+            height: 30,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Row(
             children: [
-              Text(
-                "Nama User",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white,
-                ),
-              ),
-              Text(
-                "Developer",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w300,
-                  color: Colors.white,
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Hello ✌️",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    "Jangan lupa isi taks yang dikerjakan hari ini ya",
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    "selamat bekerja",
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
               )
             ],
           )

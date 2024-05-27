@@ -100,8 +100,10 @@ class HomeView extends GetView<HomeController> {
         child: InkWell(
           onTap: onTap,
           borderRadius: BorderRadius.only(
-            topLeft: isFirst ? const Radius.circular(20) : const Radius.circular(0),
-            topRight: isLast ? const Radius.circular(20) : const Radius.circular(0),
+            topLeft:
+                isFirst ? const Radius.circular(20) : const Radius.circular(0),
+            topRight:
+                isLast ? const Radius.circular(20) : const Radius.circular(0),
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(
